@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+     <PreferenceCategory android:title="Pilot information">    
+         <EditTextPreference
+            android:key="pilotname"
+            android:inputType="text"   
+            android:summary="Pilot name for email and sms info"                       
+            android:title="Pilot Name" />  
+        <EditTextPreference
+            android:key="wingid"
+            android:inputType="number"    
+            android:summary="Competition or wing id"                      
+            android:title="Competition ID" />     
+        <ListPreference android:key="vehicletype"
+              android:title="Vehicle Type"  
+              android:summary="Select your vehicle"              
+              android:entries="@array/vehicletype_level"              
+              android:entryValues="@array/vehicletype_level_value"
+              android:defaultValue="1" />       
+        <EditTextPreference
+            android:key="wingmodel"  
+            android:summary="Enter your wing or vehicle name"                   
+            android:title="Wing Model" />           
+    </PreferenceCategory> 
+    <PreferenceCategory android:title="Livetrack24 Login information">
+        <EditTextPreference
+            android:inputType="text"
+            android:key="liveusername"  
+            android:summary="Livetrack24 Username for login"            
+            android:title="Livetrack24 Username" />
+        <EditTextPreference
+            android:inputType="textPassword"
+            android:key="livepassword"   
+            android:summary="Livetrack24 Password for login"            
+            android:title="Livetrack24 Password" />       
+         <CheckBoxPreference
+            android:key="livetrackenabled"
+            android:summary="Enable sending data to Livetrack24"  
+            android:title="Enable Livetrack24"/>    
+         <CheckBoxPreference
+            android:key="livetracktestserver"
+            android:title="Only Use Test Server"
+            android:summary="Send data to http://test.livetrack24.com" />    
+          <EditTextPreference
+            android:inputType="number"
+            android:key="minacc"   
+            android:summary="Livetrack24 minumum gps accuracy in meter"  
+            android:defaultValue="60"           
+            android:title="Minumum Gps Accuracy" />         
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Rescue Message information">    
+         <EditTextPreference
+	        android:key="sendtophone"
+	        android:inputType="phone"
+	        android:summary="Phone for sms, International or domestic"
+	        android:title="Emergency Main Sms Number"/>
+        <EditTextPreference
+            android:key="sendtoemail"
+            android:inputType="textEmailAddress"
+            android:summary="Email for emergency, empty means not send"
+            android:title="Emergency Email" />  
+    </PreferenceCategory>         
+    <PreferenceCategory android:title="General information">  
+        <ListPreference android:key="loginterval"
+              android:title="Interval Time"              
+              android:entries="@array/loginterval_level"
+              android:entryValues="@array/loginterval_level_value"
+              android:summary="Interval for gps and livetrack24"
+              android:defaultValue="3" />   
+        <CheckBoxPreference
+            android:key="sendemerency"
+            android:title="Auto Emergency Message"
+            android:summary="Send Email And Sms if not move" />   
+        <EditTextPreference
+            android:inputType="number"
+            android:key="emergencytime"
+            android:defaultValue="10"
+            android:summary="Emergency time, that you not move in minutes"
+            android:title="Emergency Time in Minutes" />      
+        <EditTextPreference
+            android:inputType="text"
+            android:key="emergencynote"
+            android:defaultValue="Emergency Case"
+            android:summary="Enter emergency note for email"
+            android:title="Emergency Note (only email)" /> 
+        <EditTextPreference
+            android:inputType="number"
+            android:key="speedlimit"
+            android:summary="Minumum Speed Limit for emergency dedection"
+            android:defaultValue="3"
+            android:title="Emergency Speed Limit" />     
+    </PreferenceCategory> 
+     <PreferenceCategory android:title="Additional SMS Numbers">    
+          <EditTextPreference
+	        android:key="sendtophone1"
+	        android:inputType="phone"	        
+	        android:title="Sms Number 1"/>    
+	      <EditTextPreference
+	        android:key="sendtophone2"
+	        android:inputType="phone"	       
+	        android:title="Sms Number 2"/>   
+	      <EditTextPreference
+	        android:key="sendtophone3"
+	        android:inputType="phone"	        
+	        android:title="Sms Number 3"/>    
+	       <EditTextPreference
+	        android:key="sendtophone4"
+	        android:inputType="phone"	        
+	        android:title="Sms Number 4"/>  
+	       <EditTextPreference
+	        android:key="sendtophone5"
+	        android:inputType="phone"	        
+	        android:title="Sms Number 5"/>  
+    </PreferenceCategory>         
+</PreferenceScreen>

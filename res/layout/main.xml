@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:padding="10dip">
+     
+  <TextView android:layout_width="fill_parent"
+       android:id="@+id/txttitle"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal"
+       android:text="@string/app_name"
+       android:textSize="16dip"
+       android:textStyle="bold"/> 
+   <Button android:id="@+id/btnStart"
+       style="@style/btnStyCustom"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dip"
+       android:text="Start" />   
+   <Button android:id="@+id/btnSettings"
+       style="@style/btnStyCustom"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dip"
+       android:text="Settings" />    
+   <Button android:id="@+id/btnLive24Track"
+       style="@style/btnStyCustom"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dip"
+       android:text="Go To livetrack24.com" />
+   <Button android:id="@+id/btnSendSms"
+       style="@style/btnStyCustom"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dip"
+       android:text="Send Sms Your Position" />    
+    <Button android:id="@+id/btnSendEmail"
+       style="@style/btnStyCustom"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dip"
+       android:text="Send Email Your Position" />    
+   <Button android:id="@+id/btnExit"
+       style="@style/btnStyCustom"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dip"
+       android:text="Exit" /> 
+        <LinearLayout android:id="@+id/LinearLayout01" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="User:" android:id="@+id/TextView05" android:textStyle="bold" android:layout_marginLeft="3dp" android:textSize="15dp"></TextView>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Please Enter LiveTrack24 Username From Settings" android:layout_marginLeft="3dp" android:id="@+id/username"></TextView>
+        </LinearLayout>
+  </LinearLayout>

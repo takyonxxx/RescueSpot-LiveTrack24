@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+    package="com.rescuespot.widget" android:versionCode="15" android:versionName="15">
+  <uses-sdk android:targetSdkVersion="19" android:minSdkVersion="9"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> 
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />  
+  <uses-permission android:name="android.permission.INTERNET" />   
+  <uses-permission android:name="android.permission.SEND_SMS" />
+  
+  <application android:icon="@drawable/icon_green"
+       android:allowBackup="true"      
+       android:label="@string/app_name"
+       android:theme="@style/AppTheme">
+  <activity android:name=".RescueSpotActivity"             
+      android:label="@string/title_activity_gpsapp_widget_example">
+	  <intent-filter>
+	  <action android:name="android.intent.action.MAIN" /> 
+	  <category android:name="android.intent.category.LAUNCHER" /> 
+	  </intent-filter>
+  </activity>
+  <activity android:name="com.rescuespot.widget.EditPreferences"/>   
+  <activity android:name="com.rescuespot.widget.WebActivity"/>   
+  <receiver android:name="com.rescuespot.widget.WidgetProvider4_1"            
+       android:label="@string/app_widget_4_1">
+            <intent-filter>                
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />                                 
+                <action android:name="ACTION_WIDGET_UPDATE_FROM_ACTIVITY"/>
+                <action android:name="ACTION_WIDGET_UPDATE_FROM_ICON"/>
+                <action android:name="ACTION_WIDGET_UPDATE_FROM_ALARM"/>                
+            </intent-filter>         
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_provider_4_1" />
+        </receiver>     
+   <service android:name="com.rescuespot.widget.GPSWidgetService"/>    
+   <service android:name="com.rescuespot.widget.WidgetService">
+	 <intent-filter>
+ 	 <action android:name="android.intent.action.CONFIGURATION_CHANGED" /> 
+ 	 </intent-filter>
+   </service>   
+  </application>  
+  </manifest>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RescueSpot</string>
+    <string name="app_widget_4_1">Rescue Spot</string>
+    <string name="app_widget_2_2">RescueSpot 2x2</string>  
+    <string name="title_activity_gpsapp_widget_example">RescueSpot</string> 
+    <string name="app_info">This widget will sent data to www.livetrack24.com your position.</string> 
+</resources>
